@@ -19,17 +19,7 @@ section {
 /* -----------------------------------------------
    GALLERY LIST
 ----------------------------------------------- */
-.task {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.task div {
-  margin: 0 auto;
-  border: solid #696865 1px;
-  width: auto;
-}
+
 .gallery {
   list-style: none;
   display: grid;
