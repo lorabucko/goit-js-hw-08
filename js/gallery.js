@@ -63,8 +63,8 @@ const images = [
     description: 'Lighthouse Coast Sea',
   },
 ];
+
 const gallery = document.querySelector('.gallery');
-gallery.insertAdjacentHTML('beforeend', createMarkup(images));
 
 function createMarkup(images) {
   return images
