@@ -1,0 +1,116 @@
+*/ *,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Satoshi", "Inter", sans-serif;
+  background-color: #f7f6f2;
+  color: #28251d;
+  min-height: 100dvh;
+  padding: 2rem;
+}
+section {
+  padding: 24px, 156px;
+}
+/* -----------------------------------------------
+   GALLERY LIST
+----------------------------------------------- */
+.task {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.task div {
+  margin: 0 auto;
+  border: solid #696865 1px;
+  width: auto;
+}
+.gallery {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  max-width: 1128px;
+  height: 648px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+  outline: 3px solid transparent;
+  outline-offset: 0px;
+  transition:
+    outline-color 200ms ease,
+    outline-offset 200ms ease;
+}
+
+.gallery-link:hover,
+.gallery-link:focus-visible {
+  outline-color: #01696f;
+  outline-offset: 2px;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 300ms ease;
+}
+
+.gallery-link:hover .gallery-image {
+  transform: scale(1.04);
+}
+
+.basicLightbox {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75) !important;
+  backdrop-filter: blur(4px);
+}
+
+.basicLightbox__placeholder {
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.basicLightbox__placeholder img {
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+/* -----------------------------------------------
+   RESPONSIVE
+----------------------------------------------- */
+
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
